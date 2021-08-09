@@ -3,11 +3,72 @@
     <head>
         <meta charset="UTF-8">
         <title>Alice's first website</title>
+        <style>
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed,
+            figure, figcaption, footer, header, hgroup,
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+
+            .vid {
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                z-index: -1;
+                position: absolute;
+                background-color: black;
+            }
+            #yt {
+                display: none;
+            }
+            #content {
+            }
+            p {
+                color: black;
+                font-size: 20pt;
+                text-align: center;
+                padding-top: 100px;
+            }
+            button {
+                width: 100px;
+                height: 30px;
+            }
+        </style>
     </head>
     <body>
-        Нажми, чтобы увидеть ЭТО
-        <br />
-        <button onclick="alert('Ульяна, хватит ржать >:(')">Кнопка</button>
-        <iframe width="1120" height="630" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--        Нажми, чтобы увидеть ЭТО-->
+<!--        <br />-->
+<!--        <button onclick="alert('ᕕ( ᐛ )ᕗ')">Супер кнопка</button>-->
+
+        <iframe class="vid" id="yt" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="content">
+            <p>Специально для тебя <3</p>
+            <div style="text-align: center">
+                <button id="btn">Жми</button>
+            </div>
+        </div>
+        <script type="application/javascript">
+            document.getElementById("btn").onclick = () => {
+              document.getElementById("content").style.display = "none"
+              document.getElementById("yt").src += "?autoplay=1";
+              document.getElementById("yt").style.display = "block"
+            }
+        </script>
+
     </body>
 </html>
