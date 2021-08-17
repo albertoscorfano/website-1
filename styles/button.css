@@ -1,0 +1,22 @@
+#yt {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+    background-color: black;
+}
+#btn {
+    width: 50px;
+    height: 40px;
+
+    position: fixed;
+    right:  10px;
+    bottom: 10px;
+
+    background-color: #33261f;
+    border-radius: 6px;
+    border-width: 1px;
+    color: #805833;
+}
